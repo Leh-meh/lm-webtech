@@ -13,22 +13,20 @@ const links = [
 export function Navbar() {
   const { scrollY } = useScroll();
   const opacity = useTransform(scrollY, [0, 80], [0, 1]);
-
-  const [open, setOpen] = useState(false); // ⭐ ALTERADO
+  const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="fixed left-0 right-0 top-0 z-50">
       <motion.div
         style={{ opacity }}
-        className="absolute inset-0 -z-10 backdrop-blur-xl bg-background/60 border-b border-border"
+        className="absolute inset-0 -z-10 border-b border-border bg-background/70 backdrop-blur-xl"
       />
 
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 py-4 md:py-5">
-        {" "}
-        {/* ⭐ ALTERADO */}
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 md:py-5">
         <Logo />
+
         {/* MENU DESKTOP */}
-        <ul className="hidden md:flex items-center gap-8">
+        <ul className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
             <li key={l.href}>
               <a
@@ -40,19 +38,37 @@ export function Navbar() {
             </li>
           ))}
         </ul>
+
         {/* CTA DESKTOP */}
         <a
           href="#contato"
-          className="hidden md:inline-flex group relative items-center gap-2 rounded-full border border-border bg-secondary/40 px-5 py-2.5 text-sm font-medium backdrop-blur-md transition hover:border-primary/40 hover:bg-secondary"
+          className="hidden rounded-full border border-border bg-secondary/40 px-5 py-2.5 text-sm font-medium backdrop-blur-md transition hover:border-primary/40 hover:bg-secondary md:inline-flex"
         >
-          <span className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_10px_var(--primary)]" />
           Iniciar projeto
         </a>
+
         {/* BOTÃO MOBILE */}
-        <button onClick={() => setOpen(!open)} className="md:hidden flex flex-col gap-1.5">
-          <span className="w-6 h-[2px] bg-foreground" />
-          <span className="w-6 h-[2px] bg-foreground" />
-          <span className="w-6 h-[2px] bg-foreground" />
+        <button
+          type="button"
+          onClick={() => setOpen(!open)}
+          aria-label={open ? "Fechar menu" : "Abrir menu"}
+          className="relative z-50 flex h-11 w-11 items-center justify-center rounded-full border border-border bg-background/80 backdrop-blur-md md:hidden"
+        >
+          <span
+            className={`absolute h-[2px] w-5 bg-foreground transition ${
+              open ? "rotate-45" : "-translate-y-1.5"
+            }`}
+          />
+          <span
+            className={`absolute h-[2px] w-5 bg-foreground transition ${
+              open ? "opacity-0" : "opacity-100"
+            }`}
+          />
+          <span
+            className={`absolute h-[2px] w-5 bg-foreground transition ${
+              open ? "-rotate-45" : "translate-y-1.5"
+            }`}
+          />
         </button>
       </nav>
 
@@ -60,36 +76,35 @@ export function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-background/95 backdrop-blur-xl flex flex-col items-center justify-center gap-10"
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.2 }}
+            className="absolute left-4 right-4 top-[76px] z-40 overflow-hidden rounded-3xl border border-border bg-background/95 p-5 shadow-2xl backdrop-blur-xl md:hidden"
           >
-            {links.map((l, i) => (
-              <motion.a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                className="text-2xl font-medium text-foreground"
-              >
-                {l.label}
-              </motion.a>
-            ))}
+            <div className="flex flex-col gap-1">
+              {links.map((l, i) => (
+                <motion.a
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  initial={{ opacity: 0, x: -8 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.04 }}
+                  className="rounded-2xl px-4 py-3 text-base font-medium text-foreground/85 transition hover:bg-secondary hover:text-foreground"
+                >
+                  {l.label}
+                </motion.a>
+              ))}
+            </div>
 
-            {/* CTA */}
-            <motion.a
+            <a
               href="#contato"
               onClick={() => setOpen(false)}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="mt-6 rounded-full bg-gradient-brand px-8 py-4 text-sm font-medium text-primary-foreground"
+              className="mt-4 flex w-full items-center justify-center rounded-full bg-gradient-brand px-6 py-3 text-sm font-semibold text-primary-foreground"
             >
               Iniciar projeto
-            </motion.a>
+            </a>
           </motion.div>
         )}
       </AnimatePresence>

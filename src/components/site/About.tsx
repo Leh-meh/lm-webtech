@@ -26,7 +26,7 @@ const pillars = [
 
 export function About() {
   return (
-    <section id="sobre" className="relative py-32">
+    <section id="sobre" className="relative py-10">
       <div className="absolute inset-x-0 top-0 -z-10 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       <div className="mx-auto max-w-7xl px-6">
         <SectionHeading
