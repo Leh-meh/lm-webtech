@@ -21,13 +21,21 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: appCss,
       },
+
+      // 🔥 FAVICON CORRIGIDO (com cache bust)
       {
         rel: "icon",
-        href: "/favicon_io/favicon.ico",
+        type: "image/x-icon",
+        href: "/favicon_io/favicon.ico?v=4",
+      },
+      {
+        rel: "shortcut icon",
+        type: "image/x-icon",
+        href: "/favicon_io/favicon.ico?v=4",
       },
       {
         rel: "apple-touch-icon",
-        href: "/favicon_io/apple-touch-icon.png",
+        href: "/favicon_io/apple-touch-icon.png?v=4",
       },
     ],
   }),
