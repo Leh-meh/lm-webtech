@@ -76,9 +76,16 @@ const services = [
 
 export function Services() {
   return (
-    <section id="servicos" className="relative py-32">
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:items-end">
+    <section id="servicos" className="relative py-20 md:py-28 lg:py-32">
+      {" "}
+      {/* ⭐ ALTERADO */}
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        {" "}
+        {/* ⭐ ALTERADO */}
+        {/* HEADER */}
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          {" "}
+          {/* ⭐ ALTERADO */}
           <SectionHeading
             eyebrow="Serviços"
             title={
@@ -87,14 +94,17 @@ export function Services() {
               </>
             }
           />
-
-          <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
+          <p className="max-w-md text-sm sm:text-base leading-relaxed text-muted-foreground">
+            {" "}
+            {/* ⭐ ALTERADO */}
             Desenvolvemos experiências digitais modernas que unem design, tecnologia e estratégia
             para destacar sua empresa no mercado.
           </p>
         </div>
-
-        <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/* GRID */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {" "}
+          {/* ⭐ ALTERADO */}
           {services.map((s, i) => (
             <motion.a
               href="#contato"
@@ -103,23 +113,35 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.6, delay: i * 0.06 }}
-              className="group relative cursor-pointer overflow-hidden rounded-3xl border border-border bg-card p-8 transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-[0_0_40px_rgba(0,180,255,0.12)]"
+              className="group relative cursor-pointer overflow-hidden rounded-3xl border border-border bg-card p-6 sm:p-8 transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-[0_0_40px_rgba(0,180,255,0.12)]" // ⭐ ALTERADO
             >
-              <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[radial-gradient(closest-side,oklch(0.78_0.16_215/0.18),transparent)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-
-              <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl border border-border bg-secondary/40 text-primary transition-all duration-300 group-hover:scale-110 group-hover:border-primary/40">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              {/* efeito */}
+              <div className="pointer-events-none absolute -right-16 -top-16 h-40 w-40 sm:h-56 sm:w-56 rounded-full bg-[radial-gradient(closest-side,oklch(0.78_0.16_215/0.18),transparent)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />{" "}
+              {/* ⭐ ALTERADO */}
+              {/* icon */}
+              <div className="relative flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl border border-border bg-secondary/40 text-primary transition-all duration-300 group-hover:scale-110 group-hover:border-primary/40">
+                {" "}
+                {/* ⭐ ALTERADO */}
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
                   {s.icon}
                 </svg>
               </div>
-
-              <h3 className="relative mt-6 text-xl font-semibold tracking-tight">{s.title}</h3>
-
-              <p className="relative mt-3 text-sm leading-relaxed text-muted-foreground">
+              {/* title */}
+              <h3 className="relative mt-5 text-lg sm:text-xl font-semibold tracking-tight">
+                {" "}
+                {/* ⭐ ALTERADO */}
+                {s.title}
+              </h3>
+              {/* desc */}
+              <p className="relative mt-2 text-xs sm:text-sm leading-relaxed text-muted-foreground">
+                {" "}
+                {/* ⭐ ALTERADO */}
                 {s.desc}
               </p>
-
-              <div className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-primary transition-all duration-300">
+              {/* CTA */}
+              <div className="relative mt-6 flex items-center gap-2 text-[10px] sm:text-xs font-medium uppercase tracking-[0.2em] text-primary">
+                {" "}
+                {/* ⭐ ALTERADO */}
                 Solicitar projeto
                 <svg
                   width="14"
