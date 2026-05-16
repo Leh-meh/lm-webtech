@@ -16,24 +16,24 @@ const projects = [
   },
   {
     img: p2,
-     title: "OBPC - Igreja",
+    title: "OBPC - Igreja",
     tag: "Site Institucional · Igreja",
     year: "2026",
     link: "https://obpc-bm.vercel.app/",
   },
   {
     img: p3,
-     title: "Golden Smile",
-  tag: "Landing Page · Odontologia",
-  year: "2026",
-  link: "https://golden-smile.vercel.app/",
+    title: "Golden Smile",
+    tag: "Landing Page · Odontologia",
+    year: "2026",
+    link: "https://golden-smile.vercel.app/",
   },
   {
     img: p4,
-     title: "Belle Essence",
-  tag: "Landing Page · Estética",
-  year: "2026",
-  link: "https://belle-essence.vercel.app/",
+    title: "Belle Essence",
+    tag: "Landing Page · Estética",
+    year: "2026",
+    link: "https://belle-essence.vercel.app/",
   },
 ];
 
@@ -45,10 +45,7 @@ export function Projects() {
           eyebrow="Projetos"
           title={
             <>
-              Projetos que unem{" "}
-              <span className="text-gradient">
-                design e performance
-              </span>.
+              Projetos que unem <span className="text-gradient">design e performance</span>.
             </>
           }
         />
@@ -93,12 +90,7 @@ export function Projects() {
                 </div>
 
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-border bg-background/60 backdrop-blur transition-all duration-500 group-hover:border-primary/50 group-hover:bg-primary group-hover:text-primary-foreground">
-                  <svg
-                    width="16"
-                    height="16"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                  >
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                     <path
                       d="M7 17L17 7M9 7h8v8"
                       stroke="currentColor"

@@ -43,11 +43,7 @@ const services = [
     title: "Identidade Visual",
     desc: "Elementos visuais que fortalecem sua marca e criam reconhecimento.",
     icon: (
-      <path
-        d="M12 3a9 9 0 100 18 9 9 0 000-18zM3 12h18"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
+      <path d="M12 3a9 9 0 100 18 9 9 0 000-18zM3 12h18" stroke="currentColor" strokeWidth="1.5" />
     ),
   },
   {
@@ -87,15 +83,14 @@ export function Services() {
             eyebrow="Serviços"
             title={
               <>
-                Soluções digitais{" "}
-                <span className="text-gradient">para sua marca</span>.
+                Soluções digitais <span className="text-gradient">para sua marca</span>.
               </>
             }
           />
 
           <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">
-            Desenvolvemos experiências digitais modernas que unem design,
-            tecnologia e estratégia para destacar sua empresa no mercado.
+            Desenvolvemos experiências digitais modernas que unem design, tecnologia e estratégia
+            para destacar sua empresa no mercado.
           </p>
         </div>
 
@@ -113,19 +108,12 @@ export function Services() {
               <div className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full bg-[radial-gradient(closest-side,oklch(0.78_0.16_215/0.18),transparent)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
               <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl border border-border bg-secondary/40 text-primary transition-all duration-300 group-hover:scale-110 group-hover:border-primary/40">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                   {s.icon}
                 </svg>
               </div>
 
-              <h3 className="relative mt-6 text-xl font-semibold tracking-tight">
-                {s.title}
-              </h3>
+              <h3 className="relative mt-6 text-xl font-semibold tracking-tight">{s.title}</h3>
 
               <p className="relative mt-3 text-sm leading-relaxed text-muted-foreground">
                 {s.desc}
@@ -133,7 +121,6 @@ export function Services() {
 
               <div className="relative mt-8 flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] text-primary transition-all duration-300">
                 Solicitar projeto
-
                 <svg
                   width="14"
                   height="14"

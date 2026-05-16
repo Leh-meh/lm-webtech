@@ -51,9 +51,7 @@ export function About() {
             >
               <div className="text-xs font-mono text-primary">{p.n}</div>
               <h3 className="mt-6 text-xl font-semibold">{p.t}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                {p.d}
-              </p>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.d}</p>
               <div className="absolute inset-x-0 bottom-0 h-px scale-x-0 bg-gradient-to-r from-transparent via-primary to-transparent transition-transform duration-500 group-hover:scale-x-100" />
             </motion.div>
           ))}

@@ -5,7 +5,6 @@ import { About } from "@/components/site/About";
 import { Services } from "@/components/site/Services";
 import { Projects } from "@/components/site/Projects";
 import { Differentials } from "@/components/site/Differentials";
-import { Testimonials } from "@/components/site/Testimonials";
 import { CTA } from "@/components/site/CTA";
 import { Footer } from "@/components/site/Footer";
 import { Cursor } from "@/components/site/Cursor";
@@ -56,7 +55,6 @@ function Index() {
       <Services />
       <Projects />
       <Differentials />
-      <Testimonials />
       <CTA />
       <Footer />
     </main>

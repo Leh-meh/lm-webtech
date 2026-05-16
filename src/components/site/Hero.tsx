@@ -53,8 +53,7 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
           className="mt-6 max-w-4xl text-5xl font-semibold leading-[1.05] tracking-tight md:text-7xl lg:text-[5.5rem]"
         >
-          Tornamos ideias em{" "}
-          <span className="text-gradient">experiências digitais</span>{" "}
+          Tornamos ideias em <span className="text-gradient">experiências digitais</span>{" "}
           memoráveis.
         </motion.h1>
 
@@ -64,8 +63,8 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 0.25 }}
           className="mt-8 max-w-xl text-lg text-muted-foreground"
         >
-          Sites modernos, performáticos e estratégicos para marcas que querem
-          se destacar no digital.
+          Sites modernos, performáticos e estratégicos para marcas que querem se destacar no
+          digital.
         </motion.p>
 
         <motion.div
@@ -80,8 +79,20 @@ export function Hero() {
           >
             <span className="absolute inset-0 -translate-x-full bg-[linear-gradient(110deg,transparent,oklch(1_0_0/0.3),transparent)] transition-transform duration-700 group-hover:translate-x-full" />
             Solicitar projeto
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="transition-transform group-hover:translate-x-1">
-              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="transition-transform group-hover:translate-x-1"
+            >
+              <path
+                d="M5 12h14M13 6l6 6-6 6"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
           </a>
           <a
@@ -100,7 +111,6 @@ export function Hero() {
         >
           <div className="flex items-center gap-3">
             <span className="h-px w-10 bg-border" />
-            
           </div>
           <span>·</span>
           <div>Performance</div>
