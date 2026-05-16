@@ -1,4 +1,5 @@
 import { HeadContent, Outlet, Scripts, createRootRoute } from "@tanstack/react-router";
+import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -14,16 +15,15 @@ export const Route = createRootRoute({
     links: [
       {
         rel: "stylesheet",
-        href: "/src/styles.css",
+        href: appCss,
       },
       {
         rel: "icon",
-        href: "/favicon/favicon.ico",
+        href: "/favicon_io/favicon.ico",
       },
-      // opcional (melhor compatibilidade)
       {
         rel: "apple-touch-icon",
-        href: "/favicon/favicon.png",
+        href: "/favicon_io/apple-touch-icon.png",
       },
     ],
   }),
