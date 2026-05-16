@@ -11,6 +11,10 @@ export const Route = createRootRoute({
         name: "description",
         content: "Criação de sites modernos, profissionais e personalizados.",
       },
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1.0",
+      },
     ],
     links: [
       {
